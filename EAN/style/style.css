@@ -17,8 +17,6 @@
   overflow: hidden;
   color: var(--color-black);
   background: var(--color-light);
-  padding-left: 30px;
-  padding-right: 30px;
 }
 
 #es-loreal.es-loreal * {
