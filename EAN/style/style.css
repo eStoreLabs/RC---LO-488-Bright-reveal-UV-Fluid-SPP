@@ -754,7 +754,7 @@
   top: 3%;
   font-weight: 900;
   color: var(--color-white);
-  font-size: 18px;
+  font-size: 16px;
 }
 
 #es-loreal.es-loreal .es-slider__slide3--bold {
@@ -1708,7 +1708,7 @@
 
 @media screen and (min-width: 996px) {
   #es-loreal.es-loreal .es-results__item--text-big {
-    font-size: 50px;
+    font-size: 43px;
   }
   #es-loreal.es-loreal .es-kv__logo {
     max-width: 250px;
@@ -1783,7 +1783,7 @@
   }
 
   #es-loreal.es-loreal .es-results__item--text {
-    font-size: 16px;
+    font-size: 11px;
   }
 
   /* **************** */
@@ -2159,13 +2159,13 @@
 #es-loreal.es-loreal .slick-button-prev {
   position: absolute;
   bottom: -11%;
-  left: 37%;
+  left: 33%;
   cursor: pointer;
 }
 #es-loreal.es-loreal .slick-button-next {
   position: absolute;
   bottom: -11%;
-  right: 37%;
+  right: 33%;
   cursor: pointer;
 }
 #es-loreal.es-loreal .slick-button-2-prev {
