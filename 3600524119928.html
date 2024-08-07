@@ -230,7 +230,7 @@
 
           <div class="es-tab-content es-tab-content--3 es-tab-content--3--2">
             <p class="es-tab__main--title es-tab__main--title-2">
-              odpowiednie nawet <strong>dla skóry wrażliwej</strong>
+              odpowiedni nawet <strong>dla skóry wrażliwej</strong>
             </p>
             <div class="es-results__list es-results__list--2">
               <div class="es-results__item es-results__item--2">
@@ -326,7 +326,7 @@
             Wizażanki uwielbiają produkty
             <span>bright reveal</span>
           </h3>
-          <div class="es-slider__wrapper">
+          <div class="es-slider__wrapper background-1">
             <div class="es-slider__content">
               <!-- <div class="swiper swiper1"> -->
               <div class="es-slick-carousel">
@@ -340,6 +340,7 @@
                     >
                       <div class="es-slider__slide1__img--bottom">
                         <img
+                          class="es-slider__slide1--img"
                           src="./3600524119928/images/wizaz_ocena.png"
                           alt="wizaż PL: 4.8 na 5 gwiazdek, na 445 recenzji"
                         />
@@ -697,6 +698,32 @@
           dots: true,
           adaptiveHeight: true,
         });
+
+        function updateBackground(index) {
+          var $wrapper = $('.es-slider__wrapper');
+
+          if (index === 1) {
+            $wrapper.removeClass('background-1').addClass('background-2');
+          } else {
+            $wrapper.removeClass('background-2').addClass('background-1');
+          }
+        }
+
+        function delayedUpdateBackground(index) {
+          setTimeout(function () {
+            updateBackground(index);
+          }, 10);
+        }
+
+        var initialIndex = $('.es-slick-carousel').slick('slickCurrentSlide');
+        updateBackground(initialIndex);
+
+        $('.es-slick-carousel').on(
+          'afterChange',
+          function (event, slick, currentSlide) {
+            delayedUpdateBackground(currentSlide);
+          },
+        );
       });
 
       $(document).ready(function () {

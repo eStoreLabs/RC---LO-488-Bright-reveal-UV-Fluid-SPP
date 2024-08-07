@@ -52,6 +52,12 @@
   position: relative;
 }
 
+#es-loreal.es-loreal .es-slider__slide1--img {
+  display: block;
+  max-width: 80%;
+  margin-left: 15%;
+}
+
 #es-loreal.es-loreal .es-kv__logo {
   position: relative;
   margin: 0 auto;
@@ -1691,14 +1697,28 @@
     padding: 32px 78px;
   }
 
-  #es-loreal.es-loreal .es-slider__wrapper::after {
+  #es-loreal.es-loreal .es-slider__wrapper.background-1::after {
     content: '';
     position: absolute;
-    bottom: -115px;
+    bottom: -25%;
     right: -4%;
-    width: 220px;
-    height: 220px;
+    width: 180px;
+    height: 180px;
     background-image: url('../images/beads-1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+    animation: pulse 5s infinite;
+  }
+
+  #es-loreal.es-loreal .es-slider__wrapper.background-2::after {
+    content: '';
+    position: absolute;
+    bottom: -25%;
+    right: -4%;
+    width: 180px;
+    height: 180px;
+    background-image: url('../images/beads-2.png');
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 2;
