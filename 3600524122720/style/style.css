@@ -54,8 +54,7 @@
 
 #es-loreal.es-loreal .es-slider__slide1--img {
   display: block;
-  max-width: 70%;
-  margin-left: 20%;
+  max-width: 100%;
 }
 
 #es-loreal.es-loreal .es-kv__logo {
@@ -704,8 +703,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 3%;
+  justify-content: center;
   padding: 16px 8px;
   gap: 16px;
+}
+
+#es-loreal.es-loreal .es-slider__slide1__text {
+  font-family: inherit;
+  font-weight: inherit;
+  font-weight: 300;
+  text-align: center;
+  text-transform: none;
+}
+#es-loreal.es-loreal .es-slider__slide1__text--purple {
+  color: purple;
 }
 
 #es-loreal.es-loreal .es-slider__slide1__rightCtn--1 {
