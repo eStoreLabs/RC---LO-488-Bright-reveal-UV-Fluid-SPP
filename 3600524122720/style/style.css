@@ -1583,6 +1583,7 @@
   #es-loreal.es-loreal .es-cross__item {
     flex-direction: row;
     min-height: 300px;
+    min-width: 565px;
   }
 
   #es-loreal.es-loreal .es-cross__img img {
@@ -1716,7 +1717,7 @@
     right: -4%;
     width: 180px;
     height: 180px;
-    background-image: url('../images/beads-2.png');
+    background-image: url('../images/beads-1.png');
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 2;
