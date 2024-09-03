@@ -61,6 +61,11 @@
       </section>
 
       <section class="es-routine">
+        <img
+          class="es-routine__bg"
+          src="./3600524122720/images/es-routine-bg.png"
+          alt=""
+        />
         <header class="es-routine__header">
           <h2 class="es-routine__title">Moc niacynamidu</h2>
           <h2 class="es-routine__subtitle">Przeciw przebarwieniom</h2>
@@ -95,6 +100,11 @@
       </section>
 
       <section class="es-results">
+        <img
+          class="es-results__bg"
+          src="./3600524122720/images/es-results-bg.png"
+          alt=""
+        />
         <p class="es-results__title">
           <span class="es-results__title--span">nIEWIDOCZNY</span>UV FLUID SPF
           50+
@@ -176,6 +186,11 @@
           </ul>
 
           <div class="es-tab-content es-tab-content--1">
+            <img
+              src="./3600524122720/images/tab1-bg.png"
+              alt=""
+              class="es-tab-content--1-bg"
+            />
             <div class="es-tab1--item">
               <p>
                 <strong>Rozświetlona</strong>
@@ -208,6 +223,11 @@
           </div>
 
           <div class="es-tab-content es-tab-content--2">
+            <img
+              src="./3600524122720/images/tab2-bg.png"
+              alt=""
+              class="es-tab-content--1-bg"
+            />
             <div class="es-tab2--item">
               <p>
                 <strong>[niacynamid]</strong>
@@ -229,6 +249,11 @@
           </div>
 
           <div class="es-tab-content es-tab-content--3 es-tab-content--3--2">
+            <img
+              src="./3600524122720/images/tab3-bg.png"
+              alt=""
+              class="es-tab-content--1-bg"
+            />
             <p class="es-tab__main--title es-tab__main--title-2">
               odpowiedni nawet <strong>dla skóry wrażliwej</strong>
             </p>
@@ -282,6 +307,11 @@
           </div>
 
           <div class="es-tab-content es-tab-content--4">
+            <img
+              class="es-tab-content--1-bg es-tab-content--4-bg"
+              src="./3600524122720/images/tab4-bg.png"
+              alt=""
+            />
             <p class="es-tab__main--title es-tab__main--title--4">
               <strong
                 >100% <br />przebarwieŃ <br />INTENSYFIKUJE SIĘ PRZEZ
@@ -301,6 +331,11 @@
       </section>
 
       <section class="es-use">
+        <img
+          src="./3600524122720/images/bg-serum.png"
+          alt=""
+          class="es-use__bg"
+        />
         <h2 class="es-use__title">Jak stosować?</h2>
         <div class="es-use__wrapper">
           <div class="es-use__single">
@@ -327,6 +362,17 @@
             <span>bright reveal</span>
           </h3>
           <div class="es-slider__wrapper background-1">
+            <img
+              src="./3600524122720/images/beads-1.png"
+              alt=""
+              class="es-beads es-beads-1"
+            />
+            <img
+              src="./3600524122720/images/beads-2.png"
+              alt=""
+              class="es-beads es-beads-2"
+            />
+
             <div class="es-slider__content">
               <!-- <div class="swiper swiper1"> -->
               <div class="es-slick-carousel">
@@ -688,54 +734,54 @@
     ></script>
     <script src="./3600524122720/scripts/slick-slider.js"></script>
     <script>
-      require(['jquery', 'slick'], function ($) {
-        $(document).ready(function () {
-          $('.es-slick-carousel').slick({
-            infinite: true,
-            slidesToShow: 1,
-            prevArrow: '.slick-button-prev',
-            nextArrow: '.slick-button-next',
-            dots: true,
-            adaptiveHeight: true,
-          });
-
-          function updateBackground(index) {
-            var $wrapper = $('.es-slider__wrapper');
-
-            if (index === 1) {
-              $wrapper.removeClass('background-1').addClass('background-2');
-            } else {
-              $wrapper.removeClass('background-2').addClass('background-1');
-            }
-          }
-
-          function delayedUpdateBackground(index) {
-            setTimeout(function () {
-              updateBackground(index);
-            }, 10);
-          }
-
-          var initialIndex = $('.es-slick-carousel').slick('slickCurrentSlide');
-          updateBackground(initialIndex);
-
-          $('.es-slick-carousel').on(
-            'afterChange',
-            function (event, slick, currentSlide) {
-              delayedUpdateBackground(currentSlide);
-            },
-          );
+      // require(['jquery', 'slick'], function ($) {
+      $(document).ready(function () {
+        $('.es-slick-carousel').slick({
+          infinite: true,
+          slidesToShow: 1,
+          prevArrow: '.slick-button-prev',
+          nextArrow: '.slick-button-next',
+          dots: true,
+          adaptiveHeight: true,
         });
 
-        $(document).ready(function () {
-          $('.es-slick-carousel-2').slick({
-            infinite: true,
-            slidesToShow: 1,
-            prevArrow: '.slick-button-2-prev',
-            nextArrow: '.slick-button-2-next',
-            dots: true,
-          });
+        function updateBackground(index) {
+          var $wrapper = $('.es-slider__wrapper');
+
+          if (index === 1) {
+            $wrapper.removeClass('background-1').addClass('background-2');
+          } else {
+            $wrapper.removeClass('background-2').addClass('background-1');
+          }
+        }
+
+        function delayedUpdateBackground(index) {
+          setTimeout(function () {
+            updateBackground(index);
+          }, 10);
+        }
+
+        var initialIndex = $('.es-slick-carousel').slick('slickCurrentSlide');
+        updateBackground(initialIndex);
+
+        $('.es-slick-carousel').on(
+          'afterChange',
+          function (event, slick, currentSlide) {
+            delayedUpdateBackground(currentSlide);
+          },
+        );
+      });
+
+      $(document).ready(function () {
+        $('.es-slick-carousel-2').slick({
+          infinite: true,
+          slidesToShow: 1,
+          prevArrow: '.slick-button-2-prev',
+          nextArrow: '.slick-button-2-next',
+          dots: true,
         });
       });
+      // });
     </script>
   </body>
 </html>
