@@ -520,8 +520,10 @@
 
 #es-loreal.es-loreal .es-tab-content--1-bg {
   position: absolute;
-  top: 0;
+  /* top: 0; */
   left: 0;
+  max-height: 300px;
+  bottom: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -603,6 +605,8 @@
   font-size: 24px;
   text-align: center;
   text-wrap: balance;
+  position: relative;
+  z-index: 1;
 }
 
 #es-loreal.es-loreal .es-tab__main--title {
@@ -1211,7 +1215,7 @@
     .es-tabbed
     [type='radio']:nth-of-type(4):checked
     ~ .es-tab-content:nth-of-type(4) {
-    height: 700px;
+    height: 500px;
   }
 
   #es-loreal.es-loreal .es-use__single {
@@ -1441,6 +1445,13 @@
   /*       768px      */
   /* **************** */
 
+  #es-loreal.es-loreal .es-tab-content--1-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: none;
+  }
+
   #es-loreal.es-loreal .es-tabs {
     flex-direction: row;
   }
@@ -1589,7 +1600,7 @@
     margin: auto;
   }
   #es-loreal.es-loreal .es-use__bg {
-    min-height: 920px;
+    min-height: 950px;
   }
 
   #es-loreal.es-loreal .es-slider__title {
