@@ -14,7 +14,6 @@
 
 #es-loreal.es-loreal * {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -132,6 +131,8 @@
   width: 100%;
   /* margin-bottom: -3px; */
   vertical-align: bottom;
+  -webkit-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 
   &:hover {
@@ -148,6 +149,12 @@
 #es-loreal.es-loreal .es-routine {
   background-size: 100% 100%;
   background-position: 0px 42px;
+  background-image: -o-radial-gradient(
+    50% 50%,
+    86% 133%,
+    #e8f4f5 0%,
+    #31a1aa 100%
+  );
   background-image: radial-gradient(
     86% 133% at 50% 50%,
     #e8f4f5 0%,
@@ -194,7 +201,12 @@
 }
 
 #es-loreal.es-loreal .es-routine__steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 32px;
 }
@@ -202,6 +214,8 @@
 #es-loreal.es-loreal .es-routine__steps .es-routine__step {
   -webkit-animation: slideleft 200ms linear;
   animation: slideleft 200ms linear;
+  -webkit-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 
   &:hover {
@@ -226,6 +240,8 @@
   background-color: #00afb6;
   margin-block: 10px;
   padding: 5px 10px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
   max-width: fit-content;
   color: #ffffff;
   font-size: 22px;
@@ -273,6 +289,7 @@
   top: 0;
   left: 0;
   min-height: 740px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 #es-loreal.es-loreal .es-results {
@@ -296,6 +313,8 @@
   color: #ffffff;
   padding-inline: 7px;
   font-weight: 900;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
   max-width: fit-content;
 }
 
@@ -322,16 +341,27 @@
 #es-loreal.es-loreal .es-results__list {
   z-index: 1;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 #es-loreal.es-loreal .es-results__item {
   z-index: 1;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 8px;
+  -webkit-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
 
@@ -374,6 +404,8 @@
   font-size: 16px;
   font-weight: 900;
   position: absolute;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   top: 0;
 
@@ -391,11 +423,17 @@
 }
 
 #es-loreal.es-loreal .es-results__BA--imgCtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: rgba(240, 243, 250, 0.6);
   padding: 20px;
   border-radius: 16px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 16px;
 
@@ -415,6 +453,8 @@
 }
 
 #es-loreal.es-loreal .es-results__BA--img img {
+  -webkit-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
@@ -445,10 +485,19 @@
 }
 
 #es-loreal.es-loreal .es-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 16px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   list-style: none;
   padding: 16px 32px;
@@ -458,6 +507,8 @@
 
 #es-loreal.es-loreal .es-tab > label {
   display: block;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   width: 250px;
   margin: auto;
@@ -469,6 +520,8 @@
   font-size: 12px;
   font-weight: 900;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -538,6 +591,7 @@
   bottom: 0;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -554,6 +608,12 @@
   .es-tabbed
   [type='radio']:nth-of-type(2):checked
   ~ .es-tab-content:nth-of-type(2) {
+  background-image: -o-radial-gradient(
+    50% 50%,
+    86% 133%,
+    #e8f4f5 0%,
+    #31a1aa 100%
+  );
   background-image: radial-gradient(
     86% 133% at 50% 50%,
     #e8f4f5 0%,
@@ -569,8 +629,15 @@
   ~ .es-tab-content:nth-of-type(3) {
   background-color: #f0f3fa;
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   position: relative;
 }
@@ -582,8 +649,15 @@
   background-color: #f0f3fa;
   background-size: cover;
   background-position: bottom;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   position: relative;
 }
@@ -592,6 +666,8 @@
 #es-loreal.es-loreal .es-tab2--item {
   position: relative;
   margin-bottom: 16px;
+  -webkit-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 
   &:hover {
@@ -684,6 +760,24 @@
   color: #ffffff;
   font-weight: 900;
   background: rgb(0, 123, 122);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(0, 123, 122, 1)),
+    color-stop(22%, rgba(79, 185, 181, 1)),
+    color-stop(50%, rgba(32, 133, 139, 1)),
+    color-stop(72%, rgba(80, 185, 179, 1)),
+    to(rgba(47, 109, 110, 1))
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(0, 123, 122, 1) 0%,
+    rgba(79, 185, 181, 1) 22%,
+    rgba(32, 133, 139, 1) 50%,
+    rgba(80, 185, 179, 1) 72%,
+    rgba(47, 109, 110, 1) 100%
+  );
   background: linear-gradient(
     90deg,
     rgba(0, 123, 122, 1) 0%,
@@ -692,6 +786,8 @@
     rgba(80, 185, 179, 1) 72%,
     rgba(47, 109, 110, 1) 100%
   );
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   margin: auto;
   padding: 4px 8px;
@@ -738,11 +834,17 @@
 #es-loreal.es-loreal .es-slider__slide--4,
 #es-loreal.es-loreal .es-slider__slide--5 {
   padding: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   gap: 8px;
-  font-size: 20px;
+  font-size: 17px;
   text-transform: none;
 }
 
@@ -758,10 +860,19 @@
 }
 
 #es-loreal.es-loreal .es-slider__slide1__rightCtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-left: 3%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 16px 8px;
   gap: 16px;
@@ -779,6 +890,8 @@
 }
 
 #es-loreal.es-loreal .es-slider__slide1__rightCtn--1 {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -790,14 +903,25 @@
 }
 
 #es-loreal.es-loreal .es-slider__slide2__photoCtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 5px;
 }
 
 #es-loreal.es-loreal .es-slider__slide2__imgCtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
@@ -805,7 +929,10 @@
   border-radius: 16px;
 
   img {
+    -o-object-fit: cover;
     object-fit: cover;
+    -webkit-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
 
     &:hover {
@@ -824,7 +951,10 @@
 
 #es-loreal.es-loreal .es-slider__slide2__BA {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   width: 100%;
   top: 3%;
@@ -911,6 +1041,7 @@
   left: 0;
   width: 100%;
   height: auto;
+  -o-object-fit: cover;
   object-fit: cover;
   min-height: 500px;
 }
@@ -937,16 +1068,11 @@
 
 #es-loreal.es-loreal .es-use__wrapper {
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -moz-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 10px 20px 40px;
@@ -965,6 +1091,8 @@
 }
 
 #es-loreal.es-loreal .es-use__single:hover .es-use__photo {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
@@ -1013,23 +1141,42 @@
 }
 
 #es-loreal.es-loreal .es-cross__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   gap: 16px;
 }
 
 #es-loreal.es-loreal .es-cross__img img {
+  -o-object-fit: contain;
   object-fit: contain;
   height: auto;
   max-height: 300px;
 }
 
 #es-loreal.es-loreal .es-cross__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   gap: 8px;
   text-align: center;
@@ -1041,6 +1188,24 @@
   color: #ffffff;
   font-weight: 900;
   background: rgb(0, 123, 122);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(0, 123, 122, 1)),
+    color-stop(22%, rgba(79, 185, 181, 1)),
+    color-stop(50%, rgba(32, 133, 139, 1)),
+    color-stop(72%, rgba(80, 185, 179, 1)),
+    to(rgba(47, 109, 110, 1))
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(0, 123, 122, 1) 0%,
+    rgba(79, 185, 181, 1) 22%,
+    rgba(32, 133, 139, 1) 50%,
+    rgba(80, 185, 179, 1) 72%,
+    rgba(47, 109, 110, 1) 100%
+  );
   background: linear-gradient(
     90deg,
     rgba(0, 123, 122, 1) 0%,
@@ -1049,6 +1214,8 @@
     rgba(80, 185, 179, 1) 72%,
     rgba(47, 109, 110, 1) 100%
   );
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   text-align: center;
   padding: 4px 8px;
@@ -1059,6 +1226,8 @@
   font-size: 22px;
   padding-bottom: 6px;
   border-bottom: 1px solid #000000;
+  -webkit-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 
   &:hover {
@@ -1074,6 +1243,8 @@
   display: block;
   margin: auto;
   min-width: 200px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
   max-width: fit-content;
   text-align: center;
   text-decoration: none;
@@ -1084,6 +1255,8 @@
   font-size: 16px;
   border-radius: 99px;
   border: 2px solid #ffffff;
+  -webkit-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 
   &:hover {
@@ -1103,15 +1276,28 @@
 
 #es-loreal.es-loreal .es-slider2__slide {
   padding-inline: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 32px;
 }
 
 #es-loreal.es-loreal .es-slider2__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   position: absolute;
   width: 100%;
@@ -1129,10 +1315,19 @@
 #es-loreal.es-loreal .es-video {
   background-color: #f0f3fa;
   padding: 32px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 48px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -1142,12 +1337,21 @@
 }
 
 #es-loreal.es-loreal .es-video__img img {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
 #es-loreal.es-loreal .es-video__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -1160,6 +1364,24 @@
   color: #ffffff;
   font-weight: 900;
   background: rgb(0, 123, 122);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(0, 123, 122, 1)),
+    color-stop(22%, rgba(79, 185, 181, 1)),
+    color-stop(50%, rgba(32, 133, 139, 1)),
+    color-stop(72%, rgba(80, 185, 179, 1)),
+    to(rgba(47, 109, 110, 1))
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(0, 123, 122, 1) 0%,
+    rgba(79, 185, 181, 1) 22%,
+    rgba(32, 133, 139, 1) 50%,
+    rgba(80, 185, 179, 1) 72%,
+    rgba(47, 109, 110, 1) 100%
+  );
   background: linear-gradient(
     90deg,
     rgba(0, 123, 122, 1) 0%,
@@ -1168,6 +1390,8 @@
     rgba(80, 185, 179, 1) 72%,
     rgba(47, 109, 110, 1) 100%
   );
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   padding: 4px 8px;
   margin-top: 8px;
@@ -1235,9 +1459,18 @@
   }
 
   #es-loreal.es-loreal .es-use__single {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-column-gap: 50px;
+    -moz-column-gap: 50px;
     column-gap: 50px;
     width: 700px;
   }
@@ -1263,6 +1496,8 @@
     top: 15%;
   }
   #es-loreal.es-loreal .es-video__left {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: start;
   }
   #es-loreal.es-loreal .es-video__text {
@@ -1271,6 +1506,9 @@
   }
   #es-loreal.es-loreal .es-results__list {
     margin-left: 42%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     gap: 30px;
   }
@@ -1281,6 +1519,9 @@
   #es-loreal.es-loreal .es-results__list--4 {
     margin-left: 21%;
     margin-bottom: 100px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -1288,6 +1529,8 @@
     .es-tabbed
     [type='radio']:nth-of-type(3):checked
     ~ .es-tab-content:nth-of-type(3) {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
   }
 
@@ -1301,6 +1544,9 @@
   #es-loreal.es-loreal .es-results__list--2 {
     margin-left: 58%;
     margin-bottom: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     color: #fff;
 
@@ -1326,6 +1572,8 @@
     .es-tabbed
     [type='radio']:nth-of-type(4):checked
     ~ .es-tab-content:nth-of-type(4) {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
   }
 
@@ -1357,6 +1605,8 @@
 
   #es-loreal.es-loreal .es-kv__img--packshot {
     max-width: 600px;
+    -webkit-transform: translateX(9%);
+    -ms-transform: translateX(9%);
     transform: translateX(9%);
     margin-bottom: 0;
   }
@@ -1368,6 +1618,7 @@
     left: 0;
     width: 100%;
     height: auto;
+    -o-object-fit: cover;
     object-fit: cover;
     max-height: 900px;
   }
@@ -1382,7 +1633,12 @@
   }
 
   #es-loreal.es-loreal .es-routine__steps {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     position: relative;
     z-index: 1;
@@ -1416,7 +1672,11 @@
     background-color: transparent;
     position: absolute;
     bottom: 48px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
     width: 75%;
     max-width: 650px;
@@ -1424,6 +1684,8 @@
     text-align: right;
     gap: 16px;
     left: 46%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     padding: 0;
     z-index: 1;
@@ -1469,6 +1731,9 @@
   }
 
   #es-loreal.es-loreal .es-tabs {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
   }
 
@@ -1628,6 +1893,8 @@
   }
 
   #es-loreal.es-loreal .es-slider__slide--1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
@@ -1636,11 +1903,15 @@
 
     img {
       height: 100%;
+      -o-object-fit: cover;
       object-fit: cover;
     }
   }
 
   #es-loreal.es-loreal .es-slider__slide2__photoCtn {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
   }
 
@@ -1652,12 +1923,12 @@
 
   #es-loreal.es-loreal .es-slider .swiper-button-next,
   #es-loreal.es-loreal .es-slider .swiper-container-rtl .swiper-button-prev {
-    right: 37%;
+    right: 35%;
   }
 
   #es-loreal.es-loreal .es-slider .swiper-button-prev,
   #es-loreal.es-loreal .es-slider .swiper-container-rtl .swiper-button-next {
-    left: 37%;
+    left: 35%;
   }
 
   #es-loreal.es-loreal .es-slider__slide--2 {
@@ -1678,6 +1949,9 @@
   }
 
   #es-loreal.es-loreal .es-cross__item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     min-height: 300px;
     min-width: 565px;
@@ -1689,6 +1963,8 @@
   }
 
   #es-loreal.es-loreal .es-cross__info {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
     text-align: right;
     display: block;
@@ -1706,6 +1982,9 @@
   /* VIDEO STYLES  */
   /* ************* */
   #es-loreal.es-loreal .es-video {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     padding: 32px 64px;
     gap: 32px;
@@ -1718,6 +1997,8 @@
   }
 
   #es-loreal.es-loreal .es-video__img img {
+    -webkit-transform: none;
+    -ms-transform: none;
     transform: none;
   }
 }
@@ -1804,7 +2085,7 @@
 
   #es-loreal.es-loreal .es-slider__wrapper {
     position: relative;
-    padding: 32px 78px;
+    padding: 32px 20px;
   }
 
   /* dodatkowy kod*/
@@ -1816,6 +2097,7 @@
     width: 180px;
     height: 180px;
     z-index: 2;
+    -webkit-animation: pulse 5s infinite;
     animation: pulse 5s infinite;
   }
 
@@ -1860,6 +2142,8 @@
 
   #es-loreal.es-loreal .es-kv__img--packshot {
     /* max-width: 800px; */
+    -webkit-transform: translateX(9%);
+    -ms-transform: translateX(9%);
     transform: translateX(9%);
   }
 
@@ -2039,6 +2323,7 @@
   }
 
   #es-loreal.es-loreal .es-cross__info {
+    -ms-flex-preferred-size: 80%;
     flex-basis: 80%;
   }
 
@@ -2323,17 +2608,23 @@
   position: absolute;
   bottom: 15px;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   text-align: center;
 }
 #es-loreal.es-loreal .slick-dots {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 0 4px;
   padding: 0;
   margin: 0;
   bottom: -10%;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
